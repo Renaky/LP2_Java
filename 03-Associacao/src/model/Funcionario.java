@@ -46,7 +46,8 @@ public class Funcionario {
 	}
 	@Override
 	public String toString(){
-		return getNome() + "  " + getSalario()+"  " +getCpf() + " " +getEmpresa().getNome();
+		return "Nome: " + getNome() + " | Salario: " + getSalario()+"| CPF: " +getCpf() + "| Empresa: " +getEmpresa().getNome() + "| Cnpj: " + getEmpresa().getCnpj() + " ";
+
 
 
 	}
