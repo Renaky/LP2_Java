@@ -38,7 +38,11 @@ public class Funcionario {
 		this.cpf = cpf;
 	}
 	public double getSalario() {
-		return salario;
+		if(salario >0)
+			return salario;
+		else
+			return 0;
+		
 	}
 	public void setSalario(double salario) {
 		if (salario >0)
