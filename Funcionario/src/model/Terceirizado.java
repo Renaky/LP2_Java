@@ -49,6 +49,10 @@ public class Terceirizado extends Funcionarios {
 	public void setArea(String area) {
 		this.area = area;
 	}
+	public String toString(){
+		return "CPF: " +getCpf() +  " | Nome: " + getNome() +   " | Data Admissao: " +getDataAdmissao() +   "| Data Fim Contrato: " +getFimContrato() +  " | Titulação (1 Prof, 2 Msc, 3 Dr.): " + getTitulo() + " | Salario: " 
+	+ calculaSalario()+ " | " + "Area atuacao: " +getArea();
+	}
 	
 	
 }

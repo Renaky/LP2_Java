@@ -57,8 +57,11 @@ public class Tecnico extends Funcionarios {
 
 	}
 	
+	public String toString(){
+		return "CPF: " +getCpf() + " | Siape: "+ getSiape() + " | Nome: " + getNome() +   " | Data Admissao: " +getDataAdmissao() +  " | Titulação (1 Prof, 2 Msc, 3 Dr.): " + getTitulo() + " | Salario: " 
+	+ calculaSalario()+ " | " + "Setor: " +getSetor();
 	
-	
+	}
 	
 	@Override
 	public double calculaSalario() {
