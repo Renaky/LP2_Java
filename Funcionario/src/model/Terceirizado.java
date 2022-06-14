@@ -1,18 +1,20 @@
 package model;
 
-
+import java.util.ArrayList;
+import java.util.List;
 
 public class Terceirizado extends Funcionarios {
 	private String area;
 	double bonus=0;
 	private String fimContrato;
+	
 
-	public Terceirizado(String cpf, String nome, String dataAdmissao,String fimContrato, int titulo, String area,double salarioBase) {
+	public Terceirizado(String cpf, String nome,String endereco, String dataAdmissao,String fimContrato, int titulo, String area,double salarioBase) {
 		
-		super(cpf, nome, dataAdmissao, titulo, salarioBase);
+		super(cpf, nome,endereco, dataAdmissao, titulo, salarioBase);
 		this.setArea(area);
 		this.fimContrato=fimContrato;
-
+		
 		
 		
 
@@ -51,7 +53,7 @@ public class Terceirizado extends Funcionarios {
 	}
 	public String toString(){
 		return "CPF: " +getCpf() +  " | Nome: " + getNome() +   " | Data Admissao: " +getDataAdmissao() +   "| Data Fim Contrato: " +getFimContrato() +  " | Titulação (1 Prof, 2 Msc, 3 Dr.): " + getTitulo() + " | Salario: " 
-	+ calculaSalario()+ " | " + "Area atuacao: " +getArea();
+	+ calculaSalario()+ " | " + "Area atuacao: " +getArea() +"\nEndereço: "+getEndereco();
 	}
 	
 	

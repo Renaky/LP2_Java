@@ -1,11 +1,13 @@
 package model;
 
-
+import java.util.ArrayList;
+import java.util.List;
 
 public class Tecnico extends Funcionarios {
 	private String setor;
 	double bonus=0;
 	private String siape;
+	private List<Tecnico> tecnicos;
 
 	public String getSetor() {
 		return setor;
@@ -35,11 +37,11 @@ public class Tecnico extends Funcionarios {
 
 
 
-	public Tecnico(String cpf,String siape, String nome, String dataAdmissao, int titulo, String setor,double salarioBase) {
+	public Tecnico(String cpf,String siape, String nome,String endereco, String dataAdmissao, int titulo, String setor,double salarioBase) {
 		
-		super(cpf, nome, dataAdmissao, titulo, salarioBase);
+		super(cpf, nome,endereco, dataAdmissao, titulo, salarioBase);
 		this.setor=setor;
-		
+		tecnicos = new ArrayList<Tecnico>();
 		this.siape=siape;
 	
 
@@ -59,7 +61,7 @@ public class Tecnico extends Funcionarios {
 	
 	public String toString(){
 		return "CPF: " +getCpf() + " | Siape: "+ getSiape() + " | Nome: " + getNome() +   " | Data Admissao: " +getDataAdmissao() +  " | Titulação (1 Prof, 2 Msc, 3 Dr.): " + getTitulo() + " | Salario: " 
-	+ calculaSalario()+ " | " + "Setor: " +getSetor();
+	+ calculaSalario()+ " | " + "Setor: " +getSetor() + "\nEndereço: "+getEndereco();
 	
 	}
 	

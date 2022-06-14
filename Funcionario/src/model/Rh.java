@@ -8,17 +8,9 @@ public class Rh {
 	
 	private String nome;
 	private List<Funcionarios> funcionarios;
-	private List<Docente> docentes;
-	private List<Tecnico> tecnicos;
-	private List<Terceirizado>terceirizados;
 	
-	public List<Terceirizado> getTerceirizados() {
-		return terceirizados;
-	}
+	
 
-	public void setTerceirizados(List<Terceirizado> terceirizados) {
-		this.terceirizados = terceirizados;
-	}
 
 	public void setFuncionarios(List<Funcionarios> funcionarios) {
 		this.funcionarios = funcionarios;
@@ -52,10 +44,16 @@ public class Rh {
 		return funcionarios.add(funcionario);
 	}
 		
-		
-
-			
-		
+	
+	public List<Funcionarios> buscaFuncionario(String nomeBusca) {
+		List<Funcionarios> aux = new ArrayList<Funcionarios>();
+	       for(Funcionarios f:funcionarios) {
+	    	   if(f.getNome().equalsIgnoreCase(nomeBusca)) {
+	    		   aux.add(f);
+	    	   }
+	    	   
+	       } return aux;
+}
 	
 	public boolean removeFuncionario(Funcionarios funcionario) {
 		if (funcionario == null)
@@ -65,19 +63,4 @@ public class Rh {
 		return funcionarios.remove(funcionario);
 	}
 
-	public List<Docente> getDocentes() {
-		return docentes;
-	}
-
-	public void setDocentes(List<Docente> docentes) {
-		this.docentes = docentes;
-	}
-
-	public List<Tecnico> getTecnicos() {
-		return tecnicos;
-	}
-
-	public void setTecnicos(List<Tecnico> tecnicos) {
-		this.tecnicos = tecnicos;
-	}
 }

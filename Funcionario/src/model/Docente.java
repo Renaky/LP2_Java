@@ -1,19 +1,20 @@
 package model;
 
-
+import java.util.ArrayList;
+import java.util.List;
 
 public class Docente extends Funcionarios {
 	private String area;
 	double bonus=0;
 	String siape;
-	
+
 	
 		
 	
 
-	public Docente(String cpf,String siape, String nome, String dataAdmissao, int titulo, String area,double salarioBase) {
+	public Docente(String cpf,String siape, String nome,String endereco, String dataAdmissao, int titulo, String area,double salarioBase) {
 		
-		super(cpf, nome, dataAdmissao, titulo, salarioBase);
+		super(cpf, nome,endereco, dataAdmissao, titulo, salarioBase);
 		this.area=area;
 		this.siape=siape;
 		
@@ -63,7 +64,7 @@ public class Docente extends Funcionarios {
 	
 	public String toString(){
 		return "CPF: " +getCpf() + " | Siape: "+ getSiape() + " | Nome: " + getNome() +   " | Data Admissao: " +getDataAdmissao() +  " | Titulação (1 Prof, 2 Msc, 3 Dr.): " + getTitulo() + " | Salario: " 
-	+ calculaSalario()+ " | " + "Area atuacao: " +getArea();
+	+ calculaSalario()+ " | " + "Area atuacao: " +getArea() +"\nEndereço: "+getEndereco();
 
 
 	}
