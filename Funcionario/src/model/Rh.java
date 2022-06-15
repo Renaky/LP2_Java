@@ -51,10 +51,12 @@ public class Rh {
 	    	   if(f.getNome().equalsIgnoreCase(nomeBusca)) {
 	    		   aux.add(f);
 	    	   }
-	    	   
-	       } return aux;
 }
-	
+	    	   
+	       
+	  return aux;
+
+	}
 	public boolean removeFuncionario(Funcionarios funcionario) {
 		if (funcionario == null)
 			return false;

@@ -154,11 +154,18 @@ public class Main {
 			case 2:
 				sc.nextLine();
 				System.out.println("\nDigite o nome que deseja buscar: ");
-				nome = sc.nextLine();
-				rh.buscaFuncionario(nome);
 				
-				
-				
+                    nome = sc.nextLine();
+                    List<Funcionarios> aux = rh.buscaFuncionario(nome);
+                    if (aux.isEmpty()) {
+                        System.out.println("Nao ha funcionarios com esse nome...");
+                    } else {
+                        for (Funcionarios f : aux) {
+                            System.out.println(f);
+                            System.out.println("********************");
+                        }
+                   }
+               
 				break;
 			case 3:
 				System.out.println("Listando Funcionarios: ");
